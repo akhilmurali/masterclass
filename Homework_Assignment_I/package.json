@@ -1,0 +1,19 @@
+{
+  "name": "ha1",
+  "version": "0.1.0",
+  "description": "A simple hello world node application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./build/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel"
+  },
+  "author": "Akhil Murali <github@akhilmurali.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
